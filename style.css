@@ -1,31 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;200;400;600;700;800;900&family=Lato:ital,wght@1,400;1,700;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  font-family: "albert sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+:root {
+  --blue: #6e00ff;
+  --black: #131415;
+  --white: #fff;
+}
+
+body {
+  width: 100%;
+  color: var(--blue);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 0px;
 }
 
 header {
-  background: #fff;
+  background: rgb(222, 243, 253);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 243, 253, 1) 0%,
+    rgba(243, 228, 250, 1) 51%,
+    rgba(255, 229, 239, 1) 100%
+  );
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70px;
   width: 100%;
-  padding: 0px 200px;
-  border-bottom: 0.5px solid #db4ec5;
+  padding: 0px 100px;
   position: fixed;
+  top: 0;
 }
 
 header .logo {
-  height: 30%;
+  height: 20%;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 header .logo:hover {
-  height: 32%;
+  height: 21%;
   cursor: pointer;
 }
 
@@ -35,14 +68,128 @@ header .logo:hover {
 }
 
 .navbar-list a {
-  color: #121a69;
+  color: var(--black);
+  font-size: 14px;
+  transition: all 0.3s;
+}
+.navbar-list a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 5px 20px;
+  text-transform: uppercase;
+  border-radius: 75px 75px;
+  font-weight: 300;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  text-decoration: underline 1px;
 }
 
 .navbar-list .btn {
-  background-color: palevioletred;
-  color: #fff;
-  padding: 5px 20px;
-  border-radius: 2px;
-  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  color: var(--white);
+}
+
+#toggle-menu {
+  display: none;
+}
+
+.header i {
+  font-size: 30px;
+  color: var(--black);
+  cursor: pointer;
+  display: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: rgb(222, 243, 253);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 243, 253, 1) 0%,
+    rgba(243, 228, 250, 1) 51%,
+    rgba(255, 229, 239, 1) 100%
+  );
+}
+
+#hero {
+  margin-top: 50px;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: max(40%, 500px);
+}
+
+.hero-info h1 {
+  word-spacing: 12px;
+  font-family: "Lato", sans-serif;
+  font-size: 76px;
+  font-weight: 900;
+}
+
+#about {
+  background-color: var(--white);
+  width: 100vw;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  max-width: max(40%, 500px);
+  gap: 30px;
+}
+
+#about h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 52px;
+}
+
+#about p,
+span {
+  color: var(--black);
+  font-size: 18px;
+}
+
+#about span {
+  font-weight: 800;
+}
+
+#courses {
+  margin-top: 30px;
+  max-width: 1200px;
+  gap: 50px;
+}
+
+.courses-title {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  width: max(45%, 500px);
+  gap: 30px;
+}
+
+.courses-title h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 52px;
+}
+
+.courses-title p {
+  color: var(--black);
+  font-size: 18px;
 }

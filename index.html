@@ -4,20 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Proyecto final</title>
   </head>
   <body>
-    <header>
-      <img src="./images/Captura logo.PNG" alt="logo" class="logo" />
+    <header class="header">
+      <img src="./images/LOGO.png" alt="logo" class="logo" />
+      <label for="toggle-menu"><i class="fas fa-bars"></i></label>
+      <input type="checkbox" id="toggle-menu" />
       <nav class="navbar">
         <ul class="navbar-list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Courses</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#contact">Contact</a></li>
           <li><a href="#" class="btn">Log In</a></li>
         </ul>
       </nav>
     </header>
+    <main>
+      <section class="section" id="hero">
+        <div class="hero-info">
+          <h1>This is not just another English Course</h1>
+        </div>
+      </section>
+      <section class="section" id="about">
+        <div class="about-info">
+          <h2>Master your English</h2>
+          <p>
+            Hello! I'm Hannah. I will provide you with all the resources and the
+            appropriate tools to help you boost your level of English!
+          </p>
+          <span>You're one course away from achieving it!</span>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </section>
+      <section class="section" id="courses">
+        <div class="courses-title">
+          <h2>The right course for you</h2>
+          <p>
+            Each course consists of 24 lessons. They cover everything you need
+            to improve your level of English. My goal is to make English
+            accessible and fun!
+          </p>
+        </div>
+        <div class="cards-container">
+          <div class="card-info">
+            <img src="./images/logo1.png" alt="" />
+            <h3>B1 Intermediate</h3>
+            <p>Speaking and Writing Guide. Comunication Strategies.</p>
+            <a href="#" class="btn">Enrol Now</a>
+          </div>
+          <div class="card-info">
+            <img src="./images/logo1.png" alt="" />
+            <h3>B2 Upper Intermediate</h3>
+            <p>Speaking and Writing Guide. Communication Strategies.</p>
+            <a href="#" class="btn">Enrol Now</a>
+          </div>
+          <div class="card-info">
+            <img src="./images/logo1.png" alt="" />
+            <h3>C1 Advanced</h3>
+            <p>Speaking and Writing Guide. Communication Strategies.</p>
+            <a href="#" class="btn">Enrol Now</a>
+          </div>
+          <div class="card-info">
+            <img src="./images/logo1.png" alt="" />
+            <h3>Working in English</h3>
+            <p>Speaking and Writing Guide. Communication Strategies.</p>
+            <a href="#" class="btn">Enrol Now</a>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
