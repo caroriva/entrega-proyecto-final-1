@@ -16,13 +16,20 @@ html {
 
 :root {
   --blue: #6e00ff;
-  --black: #131415;
+  --black: #292929;
   --white: #fff;
 }
 
 body {
   width: 100%;
   color: var(--blue);
+  background: rgb(222, 243, 253);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 243, 253, 1) 0%,
+    rgba(243, 228, 250, 1) 51%,
+    rgba(255, 229, 239, 1) 100%
+  );
 }
 
 header {
@@ -41,7 +48,7 @@ header {
   padding: 0px 100px;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 header .logo {
@@ -118,23 +125,22 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 70px 0px;
-  margin-top: 50px;
   text-align: center;
   max-width: 1200px;
+  height: 100vh;
 }
 
 .hero-info {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  max-width: max(40%, 500px);
+  max-width: max(45%, 500px);
 }
 
 .hero-info h1 {
   word-spacing: 12px;
   font-family: "Lato", sans-serif;
-  font-size: 76px;
+  font-size: 80px;
   font-weight: 900;
 }
 
@@ -258,14 +264,14 @@ span {
 }
 
 #contact img {
-  height: 450px;
+  width: 40%;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  width: max(400px, 45%);
+  width: 40%;
 }
 
 .contact-info h2 {

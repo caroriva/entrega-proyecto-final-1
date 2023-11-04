@@ -1,0 +1,102 @@
+@media (max-width: 992px) {
+  .navbar i {
+    display: block;
+    color: var(--blue);
+  }
+
+  .navbar ul {
+    width: 100%;
+    height: calc(100vh - 70px);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(222, 243, 253);
+    background: linear-gradient(
+      90deg,
+      rgba(222, 243, 253, 1) 0%,
+      rgba(243, 228, 250, 1) 51%,
+      rgba(255, 229, 239, 1) 100%
+    );
+    transform: translateX(200%);
+    transition: all 0.4s ease;
+  }
+
+  #toggle-menu:checked ~ .navbar-list {
+    transform: translateX(0%);
+    transition: all 0.4s ease;
+  }
+
+  #about {
+    align-items: center;
+    text-align: center;
+    gap: 0px;
+  }
+
+  .about-info {
+    align-items: center;
+    width: 90%;
+  }
+
+  #about img {
+    display: none;
+  }
+
+  #courses {
+    text-align: center;
+    gap: 90px;
+  }
+
+  .courses-title {
+    align-items: center;
+    width: 60%;
+    gap: 50px;
+  }
+
+  .cards-container {
+    gap: 70px;
+  }
+
+  .card-courses {
+    margin-top: 50px;
+  }
+
+  #contact {
+    align-items: center;
+    text-align: center;
+  }
+
+  #contact img {
+    display: none;
+  }
+
+  .contact-info {
+    align-items: center;
+    gap: 50px;
+    width: 60%;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 0px 40px;
+  }
+
+  #hero {
+    width: 80%;
+  }
+
+  .hero-info h1 {
+    font-size: 70px;
+  }
+
+  .courses-title {
+    width: 80%;
+  }
+
+  .media-links a {
+    font-size: 50px;
+  }
+}
