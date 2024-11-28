@@ -1,0 +1,26 @@
+#reviews {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+form {
+  display: flex;
+  max-width: 1200px;
+  gap: 15px;
+}
+
+#editReviewForm {
+  display: none;
+}
+
+.form-input {
+  border-radius: 8px;
+  background-color: var(--white);
+}
+
+#editReviewForm .form-input {
+  padding: 8px;
+}

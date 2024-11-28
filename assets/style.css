@@ -7,6 +7,7 @@
   list-style: none;
   text-decoration: none;
   font-family: "albert sans", sans-serif;
+  border: none;
 }
 
 html {
@@ -43,66 +44,62 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  height: 50px;
   width: 100%;
-  padding: 0px 100px;
+  padding: 0px 30px;
   position: fixed;
   top: 0;
   z-index: 1;
 }
 
 header .logo {
-  height: 15px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-header .logo:hover {
-  height: 16px;
-  cursor: pointer;
+  height: 12px;
 }
 
 .navbar-list {
-  display: flex;
-  gap: 60px;
+  background: rgb(222, 243, 253);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 243, 253, 1) 0%,
+    rgba(243, 228, 250, 1) 51%,
+    rgba(255, 229, 239, 1) 100%
+  );
+  display: none;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 50px);
+  position: absolute;
+  top: 50px;
+  left: 0;
 }
 
 .navbar-list a {
   color: var(--black);
   font-size: 14px;
-  transition: all 0.3s;
-}
-.navbar-list a:hover {
-  text-decoration: underline;
 }
 
 .btn {
   background-color: var(--blue);
   color: var(--white);
-  padding: 5px 20px;
+  padding: 5px 10px;
   text-transform: uppercase;
-  border-radius: 75px 75px;
+  border-radius: 75px;
   font-weight: 300;
-  transition: all 0.3s;
-}
-
-.btn:hover {
-  text-decoration: underline 1px;
 }
 
 .navbar-list .btn {
   color: var(--white);
 }
 
-#toggle-menu {
-  display: none;
+.header i {
+  font-size: 25px;
+  color: var(--blue);
 }
 
-.header i {
-  font-size: 30px;
-  color: var(--black);
-  cursor: pointer;
-  display: none;
+.show {
+  display: flex;
 }
 
 main {
@@ -111,13 +108,6 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: rgb(222, 243, 253);
-  background: linear-gradient(
-    90deg,
-    rgba(222, 243, 253, 1) 0%,
-    rgba(243, 228, 250, 1) 51%,
-    rgba(255, 229, 239, 1) 100%
-  );
 }
 
 #hero {
@@ -126,8 +116,7 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
-  max-width: 1200px;
-  height: 100vh;
+  height: 90vh;
 }
 
 .hero-info {
@@ -140,7 +129,7 @@ main {
 .hero-info h1 {
   word-spacing: 12px;
   font-family: "Lato", sans-serif;
-  font-size: 80px;
+  font-size: 50px;
   font-weight: 900;
 }
 
@@ -148,24 +137,29 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 70px 0px;
+  padding: 50px 0px;
   background-color: var(--white);
   width: 100%;
-  gap: 50px;
+  gap: 0px;
+  text-align: center;
 }
 
 .about-info {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
-  max-width: max(35%, 400px);
-  gap: 30px;
+  align-items: center;
+  width: 80%;
+  gap: 20px;
+}
+
+#about img {
+  display: none;
 }
 
 #about h2 {
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-size: 52px;
+  font-size: 45px;
 }
 
 #about p,
@@ -178,34 +172,29 @@ span {
   font-weight: 800;
 }
 
-#about img {
-  height: 400px;
-  border-radius: 10px;
-}
-
 #courses {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 70px 0px;
+  padding: 50px 0px;
   margin-top: 30px;
-  max-width: 1200px;
-  gap: 150px;
+  gap: 90px;
+  text-align: center;
 }
 
 .courses-title {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
-  width: max(45%, 500px);
-  gap: 30px;
+  align-items: center;
+  width: 60%;
+  gap: 50px;
 }
 
 .courses-title h2 {
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-size: 52px;
+  font-size: 45px;
 }
 
 .courses-title p {
@@ -218,8 +207,8 @@ span {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: min(900px, 90%);
-  gap: 130px;
+  width: 80%;
+  gap: 70px;
 }
 
 .card-courses {
@@ -230,14 +219,15 @@ span {
   background: var(--white);
   border-radius: 15px;
   gap: 30px;
-  width: 300px;
+  width: 250px;
   height: 250px;
   padding: 50px 20px 20px 20px;
   position: relative;
+  margin-top: 50px;
 }
 
 .card-courses i {
-  font-size: 100px;
+  font-size: 80px;
   position: absolute;
   top: -60px;
 }
@@ -257,38 +247,40 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
+  text-align: center;
   padding: 70px 0px;
   margin-top: 50px;
   gap: 120px;
+  width: 90%;
 }
 
 #contact img {
-  width: 40%;
+  display: none;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  width: 40%;
+  align-items: center;
+  gap: 50px;
+  width: 60%;
 }
 
 .contact-info h2 {
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-size: 52px;
+  font-size: 45px;
 }
 
 .contact-info h3 {
   color: var(--black);
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 800;
 }
 
 .contact-info p {
   color: var(--black);
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .media-links {
@@ -298,42 +290,23 @@ span {
 
 .media-links a {
   color: var(--blue);
-  font-size: 70px;
-  transition: all 0.3s;
-}
-
-.media-links a:hover {
-  color: var(--blue);
-  font-size: 73px;
+  font-size: 50px;
 }
 
 footer {
   width: 100%;
-  background: rgb(222, 243, 253);
-  background: linear-gradient(
-    90deg,
-    rgba(222, 243, 253, 1) 0%,
-    rgba(243, 228, 250, 1) 51%,
-    rgba(255, 229, 239, 1) 100%
-  );
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 70px 0px 50px 0px;
+  padding: 50px 0px;
 }
 
 footer img {
   height: 12px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-footer img:hover {
-  height: 12.5px;
-  cursor: pointer;
 }
 
 footer p {
-  font-size: 14px;
+  font-size: 12px;
 }
