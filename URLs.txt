@@ -1,0 +1,3 @@
+API: https://6747d56c38c8741641d7d298.mockapi.io/api/reviews
+
+SITIO: https://entrega-proyecto-final-1.vercel.app/
